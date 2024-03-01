@@ -1,0 +1,60 @@
+<!-- Concern Form Starts -->
+<section class="pt-3">
+    <div class="container">
+        <div class="row align-items-center pt-5">
+            <div class="col-md-7 col-lg-6 py-4" style="margin-top:-10%">
+                <div class>
+                    <form action method="get" id="healthconcern" class="h-100">
+                        <div class="alert alert-success col-12 d-none " id="querymsg">
+                            Your request for have been submitted successfully.We will call you shortly.
+                        </div>
+                        <h2 class=" fw-bold py-4 h4 page-heading primary-color">Post Your Health Concern </h2>
+                        <div class="row">
+                            <div class="col-12">
+                                <input class="form-control mb-4" id="name" type="text" placeholder="Name">
+                            </div>
+                            <div class="col-12">
+                                <input class="form-control mb-4" id="email" type="email" placeholder="Enter Email"
+                                    required>
+                            </div>
+                            <div class="col-12">
+                                <input class="form-control mb-4" id="mobile" type="number"
+                                    placeholder="Mobile Number" required>
+                            </div>
+                            <div class="col-12">
+                                <select class="form-control mb-4" id="msg">
+                                    <option> Select Health Concern </option>
+                                    <option value=" Liver & Kidney"> Liver & Kidney </option>
+                                    <option value=" Digestive"> Digestive </option>
+                                    <option value=" Heart & Lungs"> Heart & Lungs </option>
+                                    <option value=" Ear Nose Throat"> Ear Nose Throat </option>
+                                    <option value=" Reproductive"> Reproductive </option>
+                                    <option value=" Bones & Joints"> Bones & Joints </option>
+                                    <option value=" Diabetes"> Diabetes </option>
+                                    <option value=" Piles"> Piles </option>
+                                    <option value=" Fever"> Fever </option>
+                                    <option value=" Gynaecology & Fertility"> Gynaecology & Fertility </option>
+                                    <option value=" Skin Care"> Skin Care </option>
+                                    <option value=" Pediatrics"> Pediatrics </option>
+                                    <option value=" Immunity"> Immunity </option>
+                                    <option value=" Neuro"> Neuro </option>
+                                    <option value=" Menopause"> Menopause </option>
+                                    <option value=" Eyes"> Eyes </option>
+                                    <option value=" Mindful Eating"> Mindful Eating </option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <input type="button" onclick="send_query_healthconcern()" value="Submit"
+                                    class="fw-bold btn primary-btn shadow-none rounded">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-8 col-md-5 ms-md-auto order-md-111">
+                <img src="#" alt="	Online Consultation" loading="lazy" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Concern Form Ends -->

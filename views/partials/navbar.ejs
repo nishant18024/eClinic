@@ -1,0 +1,281 @@
+<!-- public/js/upadateSearchPlaceholder.js -->
+
+<a href="../"></a>
+<!-- Navbar Starts -->
+<section>
+    <svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        style="width: 0px; height: 0px; overflow: hidden; position: absolute;" version="1.1">
+        <symbol id="icon_plus" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+        </symbol>
+        <symbol id="icon_vdots" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </symbol>
+        <symbol id="icon_checkcircle" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+        </symbol>
+        <symbol id="icon_geo" viewBox="0 0 16 16" fill="currentColor">
+            <path
+                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+        </symbol>
+        <symbol id="icon_search" viewBox="0 0 16 16" fill="currentColor">
+            <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </symbol>
+        <symbol id="icon_trash" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+        </symbol>
+        <symbol id="icon_pluscircle" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+        </symbol>
+        <symbol id="icon_minuscircle" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+        </symbol>
+        <symbol id="icon_phoneon" viewBox="0 0 384 512">
+            <path fill="currentColor"
+                d="M97.333 506.966c-129.874-129.874-129.681-340.252 0-469.933 5.698-5.698 14.527-6.632 21.263-2.422l64.817 40.513a17.187 17.187 0 0 1 6.849 20.958l-32.408 81.021a17.188 17.188 0 0 1-17.669 10.719l-55.81-5.58c-21.051 58.261-20.612 122.471 0 179.515l55.811-5.581a17.188 17.188 0 0 1 17.669 10.719l32.408 81.022a17.188 17.188 0 0 1-6.849 20.958l-64.817 40.513a17.19 17.19 0 0 1-21.264-2.422zM247.126 95.473c11.832 20.047 11.832 45.008 0 65.055-3.95 6.693-13.108 7.959-18.718 2.581l-5.975-5.726c-3.911-3.748-4.793-9.622-2.261-14.41a32.063 32.063 0 0 0 0-29.945c-2.533-4.788-1.65-10.662 2.261-14.41l5.975-5.726c5.61-5.378 14.768-4.112 18.718 2.581zm91.787-91.187c60.14 71.604 60.092 175.882 0 247.428-4.474 5.327-12.53 5.746-17.552.933l-5.798-5.557c-4.56-4.371-4.977-11.529-.93-16.379 49.687-59.538 49.646-145.933 0-205.422-4.047-4.85-3.631-12.008.93-16.379l5.798-5.557c5.022-4.813 13.078-4.394 17.552.933zm-45.972 44.941c36.05 46.322 36.108 111.149 0 157.546-4.39 5.641-12.697 6.251-17.856 1.304l-5.818-5.579c-4.4-4.219-4.998-11.095-1.285-15.931 26.536-34.564 26.534-82.572 0-117.134-3.713-4.836-3.115-11.711 1.285-15.931l5.818-5.579c5.159-4.947 13.466-4.337 17.856 1.304z">
+            </path>
+        </symbol>
+        <symbol id="icon_phoneoff" viewBox="0 0 640 512">
+            <path fill="currentColor"
+                d="M268.2 381.4l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48c-10.7 4.6-16.5 16.1-13.9 27.5l24 104c2.5 10.8 12.1 18.6 23.4 18.6 100.7 0 193.7-32.4 269.7-86.9l-80-61.8c-10.9 6.5-22.1 12.7-33.6 18.1zm365.6 76.7L475.1 335.5C537.9 256.4 576 156.9 576 48c0-11.2-7.7-20.9-18.6-23.4l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-12.2 26.1-27.9 50.3-46 72.8L45.5 3.4C38.5-2 28.5-.8 23 6.2L3.4 31.4c-5.4 7-4.2 17 2.8 22.4l588.4 454.7c7 5.4 17 4.2 22.5-2.8l19.6-25.3c5.4-6.8 4.1-16.9-2.9-22.3z">
+            </path>
+        </symbol>
+        <symbol id="icon_video" viewBox="0 0 576 512">
+            <path fill="currentColor"
+                d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z">
+            </path>
+        </symbol>
+        <symbol id="icon_mic" viewBox="0 0 352 512">
+            <path fill="currentColor"
+                d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z">
+            </path>
+        </symbol>
+        <symbol id="icon_expandon" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M198.829 275.515l5.656 5.656c4.686 4.686 4.686 12.284 0 16.971L54.627 448H116c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12H12c-6.627 0-12-5.373-12-12V364c0-6.627 5.373-12 12-12h8c6.627 0 12 5.373 12 12v61.373l149.858-149.858c4.687-4.687 12.285-4.687 16.971 0zM436 32H332c-6.627 0-12 5.373-12 12v8c0 6.627 5.373 12 12 12h61.373L243.515 213.858c-4.686 4.686-4.686 12.284 0 16.971l5.656 5.656c4.686 4.686 12.284 4.686 16.971 0L416 86.627V148c0 6.627 5.373 12 12 12h8c6.627 0 12-5.373 12-12V44c0-6.627-5.373-12-12-12z">
+            </path>
+        </symbol>
+        <symbol id="icon_expandonoff" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M9.171 476.485l-5.656-5.656c-4.686-4.686-4.686-12.284 0-16.971L169.373 288H108c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h100c8.837 0 16 7.163 16 16v100c0 6.627-5.373 12-12 12h-8c-6.627 0-12-5.373-12-12v-61.373L26.142 476.485c-4.687 4.687-12.285 4.687-16.971 0zM240 256h100c6.627 0 12-5.373 12-12v-8c0-6.627-5.373-12-12-12h-61.373L444.485 58.142c4.686-4.686 4.686-12.284 0-16.971l-5.656-5.656c-4.686-4.686-12.284-4.686-16.971 0L256 201.373V140c0-6.627-5.373-12-12-12h-8c-6.627 0-12 5.373-12 12v100c0 8.837 7.163 16 16 16z">
+            </path>
+        </symbol>
+        <symbol id="icon_google" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+        </symbol>
+        <symbol id="icon_facebook" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
+            </path>
+        </symbol>
+        <symbol id="icon_twitter" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
+            </path>
+        </symbol>
+        <symbol id="icon_youtube" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z">
+            </path>
+        </symbol>
+    </svg>
+
+    <header id="navbar_sticky">
+        <div id="loading">
+            <img id="loading-image" style="width:100px" src="./img/loading.gif" alt="Loading..." />
+        </div>
+
+        <div class="container  mw " style="width:100%;  ">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-2 pe-0 pe-lg-3">
+                    <button type="button" class="mobile-menutoggle btn px-2 text-green d-lg-none">
+                        <svg xmlns="https://www.w3.org/2000/svg" class="icon icon-5x mt-1">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </button>
+                    <a href="#" class="logo-box">
+                        <img src="./img/logo.jpg" alt="logo logo">
+                    </a>
+                    <div class="d-inline-flex d-lg-none align-items-center  float-end  mblheight  ">
+                        <button type="button" data-bs-target="#mobileSearch" data-bs-toggle="modal" class="btn d-none ">
+                            <svg class="icon">
+                                <use href="#icon_search"></use>
+                            </svg>
+                        </button>
+                        <a href="#" class="text-theme" id="signin_btn_t">
+                            <i class="fa fa-shopping-cart fa-lg"></i>
+                            (<span class="showCicount">0</span>)
+                        </a>
+                        <a href="#"
+                            class="text-decoration-none fs-14 mx-2 text-green btn rounded-0 btn-sign-in">Login</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-10 text-lg-end menu-listing">
+                    <ul class=" web-v list-inline mobile-orderbottom">
+                        <li class="list-inline-item">
+                            <a href="#">Home </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"> Book Video Consultation</a>
+                        </li>
+                        <li class="list-inline-item d-none">
+                            <a href="#">Clinic Consultation </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                                Care Category
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-md">
+                                <li>
+                                    <a href="#" class="dropdown-item">All Doctors</a>
+                                    <a href="#" class="dropdown-item">Nursing Services</a>
+                                    <a href="#" class="dropdown-item">Psychotherapist</a>
+                                    <a href="#" class="dropdown-item">Yoga</a>
+                                </li>
+                                <li><a href="#" class="dropdown-item"> Dietician </a></li>
+                            </ul>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Join us </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">About Us </a>
+                        </li>
+                        <li class="list-inline-item" style="margin-left:0px">
+                        </li>
+
+                    </ul>
+
+                    <ul class="mob-v list-inline mobile-links mobile-orderbottom">
+                        <li class="list-inline-item">
+                            <a href="#"><img src="#" alt class="menulink_img"> Home </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><img src="#" alt class="menulink_img"> Book Video Consultation</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><img src="#" alt class="menulink_img"> Buy Medicines</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><img src="#" alt class="menulink_img"> Buy Personal Care </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="#" alt class="menulink_img"> My Appointments
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li class="list-inline-item">
+                                        <a href="#"><img src="#" alt class="menulink_img"> Video Appointments</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#"><img src="#" alt class="menulink_img"> Clinic Appointments</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><img src="#" alt class="menulink_img"> Parenthood Program<span
+                                    class="badge">New</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="#" alt class="menulink_img"> Yoga Sessions
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li class="list-inline-item">
+                                        <a href="#"><img src="#" alt class="menulink_img"> Book Yoga </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#"><img src="#" alt class="menulink_img"> Book Yoga </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#"><img src="#" alt class="menulink_img"> Book Yoga </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><img src="#" alt class="menulink_img"> My Orders</a>
+                        </li>
+                        <li class="list-inline-item d-none">
+                            <a href="#"><img src="#" alt class="menulink_img"> My Prescription</a>
+                        </li>
+                    </ul>
+
+                    <ul class="mob-v list-inline logout-menu">
+                        <li><a href="#" onclick="logoutStorage()" id="logout_btn">Logout</a></li>
+                    </ul>
+
+                    <div class="d-none d-lg-flex align-items-center justify-content-end mobile-ordertop">
+                        <form method="get" class="header-form" style="width:71%" id="form_submit2" action="#">
+                            <div class="col-12 position-relative  ">
+                                <input type="search" class="form-control rounded-pill pe-40px  mj-search" id="searchBox"
+                                    autocomplete="off" value name="keyword"
+                                    placeholder="Search Medicines">
+
+                                    <script>
+
+                                    let placeholders = ["Search Doctors...", "Search Nurse...", "Search Physiotherapist..."]
+                                    let currentIndex = 0
+                                    function updatePlaceholder() {
+                                        let placeholder = document.querySelector('#searchBox').placeholder = placeholders[currentIndex]
+                                        currentIndex = (currentIndex + 1) % placeholders.length
+                                    }
+                                    // console.log('Check')
+
+                                    setInterval(updatePlaceholder, 1000)
+
+                                    </script>
+
+
+                                <svg class="icon icon-2x position-absolute top-50 end-0 translate-middle me-2    "
+                                    onclick="submitForm2()">
+                                    <use href="#icon_search"></use>
+                                </svg>
+                                <div class="mj-list dropdown-content_search  " id="cds">
+                                </div>
+                            </div>
+                        </form>
+                        <div class="text-lg-end mobile-useraction">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item">
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-theme" id="signin_btn_t">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        (<span class="showCicount">0</span>)
+                                    </a>
+                                </li>
+                                <li class="list-inline-item hide">
+                                    <a href="#" class="text-theme" id="signin_btn"><i class="fa fa-heart"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-theme" id="signin_btn">Login</a>
+                                    <!-- <a href="#" class="text-theme">Sign Up</a> -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mj-menu-overlay d-lg-none"></div>
+                <div class="mj-menu-overlay-profile d-lg-none"></div>
+            </div>
+        </div>
+    </header>
+</section>
+
+<!-- Navbar Ends -->

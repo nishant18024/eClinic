@@ -12,8 +12,8 @@ app.set('views', path.join(__dirname, 'views'))
 // static file path
 app.use(express.static(path.join(__dirname, 'public')))
 
-
-app.use('/home', (req, res) => {
+// Home Route
+app.get('/home', (req, res) => {
     res.render('home')
 })
 
